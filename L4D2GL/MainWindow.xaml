@@ -1,0 +1,29 @@
+﻿<Window x:Class="L4D2GL.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Left 4 Dead 2 Gore Loader" WindowStyle="None" AllowsTransparency="True" MouseDown="Window_MouseDown" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Height="406" Width="285" Background="{x:Null}" Icon="/L4D2GL;component/Resources/left4dead2.ico">
+    <Grid Width="239" Height="345">
+        <Grid.Background>
+            <ImageBrush ImageSource="/L4D2GL;component/Resources/Background.jpg" Stretch="Uniform" TileMode="None" />
+        </Grid.Background>
+        <Button Content="Exit" Height="31" HorizontalAlignment="Left" Margin="12,302,0,0" Name="button1" VerticalAlignment="Top" Width="215" Click="button1_Click" />
+        <Button Content="Configure" Height="31" HorizontalAlignment="Left" Margin="12,265,0,0" Name="uxConfigure" VerticalAlignment="Top" Width="215" Click="uxConfigure_Click" />
+        <Button Content="Launch L4D2" Height="31" HorizontalAlignment="Left" Margin="12,228,0,0" VerticalAlignment="Top" Width="215" Name="uxLaunchL4D2" Click="uxLaunchL4D2_Click" />
+        <Border VerticalAlignment="Top" BorderThickness="1" CornerRadius="4" Height="100" Margin="12,12,0,0" Padding="5" BorderBrush="LightGray" Background="#DDFFFFFF" Name="VersionPicker" HorizontalAlignment="Left" Width="215">
+            <Grid>
+                <Label Content="Left 4 Dead 2 Version:" Height="28" HorizontalAlignment="Left" Name="uxL4d2title" VerticalAlignment="Top" />
+                <CheckBox Content="Gore Version" Height="16" HorizontalAlignment="Left" Margin="6,28,0,0" Name="uxTypeGore" VerticalAlignment="Top" Checked="uxTypeGore_Checked" />
+                <CheckBox Content="Normal Version" Height="16" HorizontalAlignment="Left" Margin="6,50,0,0" Name="uxTypeNormal" VerticalAlignment="Top" Checked="uxTypeNormal_Checked" />
+                <CheckBox Content="Unknown Version" Height="16" HorizontalAlignment="Left" Margin="6,72,0,0" Name="uxTypeUnknown" VerticalAlignment="Top" IsEnabled="False" />
+            </Grid>
+        </Border>
+        <Border Name="uxMessageBox" BorderThickness="1" CornerRadius="4" Padding="5" BorderBrush="LightGray" Background="#DDFFFFFF" Margin="12,118,0,0" Height="104" VerticalAlignment="Top" HorizontalAlignment="Left" Width="215">
+            <Grid>
+                <TextBlock Name="uxStatusMessage"  HorizontalAlignment="Left" Margin="38,0,0,0" VerticalAlignment="Top" TextWrapping="Wrap" FontSize="10"></TextBlock>
+                <Image Height="32" HorizontalAlignment="Left" Margin="0,6,0,0" Name="uxStatusImageWarning" Source="/L4D2GL;component/Resources/Warning.png" Stretch="Fill" VerticalAlignment="Top" Width="32" />
+                <Image Height="32" HorizontalAlignment="Left" Margin="0,6,0,0" Name="uxStatusImageError" Source="/L4D2GL;component/Resources/Error.png" Stretch="Fill" VerticalAlignment="Top" Width="32" />
+                <Image Height="32" HorizontalAlignment="Left" Name="uxStatusImageInfo" Stretch="Fill" VerticalAlignment="Top" Width="32" Source="/L4D2GL;component/Resources/Info.png" Margin="0,6,0,0" />
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
